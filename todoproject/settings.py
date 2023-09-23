@@ -15,7 +15,7 @@ from pathlib import Path
 import os
 SECRET_KEY = os.environ.get('SECRET_KEY', default='localkey2022')
 DEBUG = 'RENDER' not in os.environ
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['cheese-app-backend-z1im.onrender.com']
 
 ## Handling Allowed Hosts on Render
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
