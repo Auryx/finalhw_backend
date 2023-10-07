@@ -13,9 +13,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
-SECRET_KEY = os.environ.get('SECRET_KEY', default='localkey2022')
-DEBUG = 'RENDER' not in os.environ
-ALLOWED_HOSTS = ['cheese-app-backend-z1im.onrender.com']
+
+# Total hours spent researching: 3, idk how to fix the dissallowed host
+
+ALLOWED_HOSTS = []
 
 ## Handling Allowed Hosts on Render
 RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
@@ -30,12 +31,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-ruj4c(_gkf0c*_&ir&v8ab(%nftbu^pdnpo2cvjk8lre*pw@og'
+SECRET_KEY = os.environ.get('SECRET_KEY', default='localkey2022')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
+DEBUG = 'RENDER' not in os.environ
 
 
 # Application definition
